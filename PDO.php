@@ -17,17 +17,16 @@ $dbname = "TheDistrict";
 
 /*---------------------------- TOUTES MES FONCTIONS ----------------------------*/
 
-Function get_categories($conn) 
+Function GetCategories($conn) 
 
 {
-    $requete = $conn -> query('SELECT * FROM categorie WHERE active = 1');
+    $requete = $conn -> query('SELECT `id_categorie` , `libelle` , `image` , `active` FROM categorie WHERE active = 1');
     $categories = $requete -> fetchAll(PDO::FETCH_OBJ);
     $requete -> closeCursor();
     return $categories;   
 }
 
-
-Function get_plats($conn)
+Function GetPlats($conn)
 
 {
     $requete = $conn -> query ('SELECT * FROM plat WHERE active = 1');
@@ -35,6 +34,7 @@ Function get_plats($conn)
     $requete -> closeCursor();
     return $plats;
 }
+
 
 
 ?>

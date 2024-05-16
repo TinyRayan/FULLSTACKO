@@ -38,7 +38,7 @@
 
           <div class=" col-11 col-md-10 d-flex justify-content-between  ">
 
-            <a id="color_navlink" href="index.php" class="me-lg-5 me-4  fw-bold">Accueil</a>
+            <a id="color_navlink" href="index.php" class="me-lg-5 me-4 fw-bold">Accueil</a>
             <a id="color_navlink" href="catégorie.php" class="me-lg-5 me-4 fw-bold">Catégorie</a>
             <a id="color_navlink" href="plats.php" class="me-lg-5 me-4 fw-bold">Plats</a>
             <a id="color_navlink" href="Contact.php" class="me-lg-5 me-4 fw-bold">Contact</a>

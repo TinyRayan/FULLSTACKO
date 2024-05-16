@@ -1,6 +1,6 @@
 <?php require_once('header/header.php'); 
       require('PDO.php'); 
-      $categories = get_categories($conn);
+      $categories = GetCategories($conn);
 ?> 
 
 
@@ -31,38 +31,37 @@
   <!-- SEARCH BAR ---------------------------->
 
 
-  <main class="mt-5">
+
 
    <!-- CARDS 1 ------------------------------>
-
+  <main class="mt-5">
+    
    <div class="container-fluid mt-3 ">
 
-    <div class="container-fluid mt-5 d-md-inline-flex justify-content-md-around row">
-
-      <div id="cardtop" class="row justify-content-center">
-      </div>
-
-       <?php foreach ($categories as $categorie): ?>
-
-       <div class="col-10 col-sm-8 col-md-3 col-lg-2 mb-4 ms-lg-5 me-lg-5 mx-md-0">
-        <div id="cardplat" class="card">
-          <a id="colorcards" href="plats.html">
-            <img src="Asset/img/IMAGES/images_the_district/category/<?php echo $categorie -> image; ?>" height="400rem"
-              class="card-img-top" alt="<?php echo $categorie -> image; ?>">
-            <div class="card-body">
-              <h5 class="card-title"><?php echo $categorie -> libelle; ?></h5>
-          </a>
-        </div>
-      </div>
-    </div>
-   <?php endforeach; ?>
-
-    <!-- CARDS 1 -->
-
- </div> 
+   <div class="container-fluid mt-3">
+    <div id="cardtop" class="row d-flex justify-content-center ">
+      <?php foreach ($categories as $categorie): ?>
+        <div class="col-10 col-sm-6 col-md-4 col-lg-3 mb-4 mx-lg-3 mx-md-0">
+          <div id="cardplat" class="card">
+            <a id="colorcards" href="plats.php?categorie=<?php echo $categorie->id_categorie; ?>">
+              <img src="Asset/img/IMAGES/images_the_district/category/<?php echo $categorie->image; ?>" height="600rem"
+                class="card-img-top" alt="<?php echo $categorie->libelle; ?>">
+              <div class="card-body">
+                <h5 class="card-title fs-2 text-center bg-secondary-subtle rounded-pill">
+                  <?php echo $categorie->libelle; ?></h5>
+                    </a>
+         </div>
+       </div>
+     </div>
+    <?php endforeach; ?>
+   </div>
   </div>
+    <!-- CARDS 1 ------------------------------->
 
-  <!-- CARDS 1------------------------------------>
+
+  
+
+  <!-- BUTTON ------------------------------------>
 
 
 

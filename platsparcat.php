@@ -1,9 +1,13 @@
-<?php require_once('header/header.php'); 
+<?php require_once('header/header.php');
+
 require ('PDO.php');
-$plats = GetPlats($conn);
 
 ?>
+<?php 
+$id = $_GET['categorie'];
+var_dump($id);
 
+?>
   <header id="blackshadow" class="d-flex justify-content-center p-0 ">
 
     <!-- BACKGROUND ------------------------->
@@ -37,23 +41,23 @@ $plats = GetPlats($conn);
       <div class="container-fluid row d-flex justify-content-center m-0">
     
         <div id="platpage" class="row d-flex justify-content-center">
-          <?php foreach ($plats as $plat) : ?>
+         
          <div id="cardplat" class="card col-4 flex-row ms-lg-5 me-lg-5 mt-4" style="width: 40rem;">
  
-         <img src="Asset/img/IMAGES/images_the_district/food/<?php echo $plat -> image; ?>" class=" rounded-3 border border-muted img-fluid m-auto" alt=""
-            style="width: 10rem; height: 7rem;">
-             <p id="etiquette" class= "position-absolute rounded-bottom fs-5 p-1" ><?php echo $plat -> prix . "€"; ?></p>   
+         <img src="Asset/img/IMAGES/images_the_district/food/" class=" rounded-3 border border-muted img-fluid m-auto" alt=""
+            style="width: 10rem; height: fit-content;">
+
           <div class="card-body">
-            <h5 class="card-title fs-3 mt-md-4 mt-1"><?php echo $plat -> libelle; ?></h5>
-            <p class="card-text fst-italic mb-3"><?php echo $plat -> description; ?></p>
+            <h5 class="card-title fs-3 mt-md-4 mt-1"></h5>
+            <p class="card-text fst-italic mb-3"></p>
             <div id="OMBRE" class="d-flex justify-content-center">
-              <a href="#" class="btn d-flex justify-content-center fw-medium shadow-lg w-75"  id="bouton">Commander</a>
+              <a href="#" class="btn d-flex justify-content-center fw-medium shadow-lg w-75" id="bouton">Commander</a>
             </div>
 
           </div>  
    
         </div>
-        <?php endforeach; ?> <!-- Unexpected 'endforeach' -->
+        <?php ?>
         </div>
 
       </div>
@@ -61,24 +65,9 @@ $plats = GetPlats($conn);
     </div>
         <!-- CARD 1 -->
 
-        <div class="container-fluid mt-5">
-          <div class="col row">
-
-            <div id="OMBRE" class="col d-flex justify-content-start ">
-
-              <a class="btn btn-lg" href="RESTART.HTML" role="button">Précédent</a>
-
-            </div>
-
-            <div id="OMBRE" class="col d-flex justify-content-end ">
-
-              <a class="btn btn-lg px-4" href="page2.html" role="button">Suivant</a>
-
-            </div>
-          </div>
-
   </main>
 
 
-<?php require_once('footer/footer.php'); ?>
+<?php require_once('footer/footer.php'); 
 
+?>
