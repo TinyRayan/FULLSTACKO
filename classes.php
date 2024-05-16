@@ -26,12 +26,14 @@ class Plat {
     public $image;
     public $id_categorie;
     public $categorie_libelle;
+    public $description;
 
-    public function __construct($libelle = null , $prix = null , $image = null , $id_categorie = null , $categorie_libelle = null){
+    public function __construct($libelle = null , $prix = null , $image = null , $description , $id_categorie = null , $categorie_libelle = null){
 
         $this->libelle = $libelle;
         $this->prix = $prix;
         $this->image = $image;
+        $this->description = $description;
         $this->id_categorie = $id_categorie;
         $this->categorie_libelle = $categorie_libelle;
 
@@ -57,25 +59,37 @@ class Plat {
         return $this->categorie_libelle ;
     }
 
+    public function GetDescription(){
+        return $this->description;
+    }
+
+
+
+public function cardcat(){
+        
+   echo "        
+    <div id='cardplat' class='card col-4 flex-row ms-lg-5 me-lg-5 mt-4' style='width: 40rem;'>
+ 
+   <img src='Asset/img/IMAGES/images_the_district/food/".$this->GetImage()."' class=' rounded-3 border border-muted img-fluid m-auto' alt=''
+      style='width: 10rem; height: 7rem;'>
+       <p id='etiquette' class= 'position-absolute rounded-bottom fs-5 p-1' >".$this->GetPrix()."</p>   
+    <div class='card-body'>
+      <h5 class='card-title fs-3 mt-md-4 mt-1'>".$this->GetLibelle()."</h5>
+      <p class='card-text fst-italic mb-3'>".$this->GetDescription()."</p>
+      <div id='OMBRE' class='d-flex justify-content-center'>
+        <a href='#' class='btn d-flex justify-content-center fw-medium shadow-lg w-75'  id='bouton'>Commander</a>
+      </div>
+
+    </div>  
+
+  </div>" ;
+    
 }
 
-/* public function cardcat(){
-          <?php foreach ($categories as $categorie): ?>
-        <div class="col-10 col-sm-6 col-md-4 col-lg-3 mb-4 mx-lg-3 mx-md-0">
-          <div id="cardplat" class="card">
-            <a type="submit" id="colorcards" href="platsparcat.php?categorie=<?php echo $categorie->id_categorie; ?>">
-              <img src="Asset/img/IMAGES/images_the_district/category/<?php echo $categorie->image; ?>" height="600rem"
-                class="card-img-top" alt="<?php echo $categorie->libelle; ?>">
-              <div class="card-body">
-                <h5 class="card-title fs-2 text-center bg-secondary-subtle rounded-pill">
-                  <?php echo $categorie->libelle; ?></h5>
-                    </a>
-         </div>
-       </div>
-     </div>
-    <?php endforeach; ?>
 }
- */
+
+
+
 
 
 

@@ -4,8 +4,7 @@ require ('PDO.php');
 
 ?>
 <?php 
-$id = $_GET['categorie'];
-var_dump($id);
+
 
 ?>
   <header id="blackshadow" class="d-flex justify-content-center p-0 ">
@@ -41,23 +40,27 @@ var_dump($id);
       <div class="container-fluid row d-flex justify-content-center m-0">
     
         <div id="platpage" class="row d-flex justify-content-center">
-         
-         <div id="cardplat" class="card col-4 flex-row ms-lg-5 me-lg-5 mt-4" style="width: 40rem;">
- 
-         <img src="Asset/img/IMAGES/images_the_district/food/" class=" rounded-3 border border-muted img-fluid m-auto" alt=""
-            style="width: 10rem; height: fit-content;">
+        <?php foreach ($plats as $plat) : ?>
+        <?php
+        
+          if(isset($_GET['categorie']));{
+            
+          }
+          var_dump($id);
 
-          <div class="card-body">
-            <h5 class="card-title fs-3 mt-md-4 mt-1"></h5>
-            <p class="card-text fst-italic mb-3"></p>
-            <div id="OMBRE" class="d-flex justify-content-center">
-              <a href="#" class="btn d-flex justify-content-center fw-medium shadow-lg w-75" id="bouton">Commander</a>
-            </div>
+        ?>
+          
 
-          </div>  
-   
-        </div>
-        <?php ?>
+
+
+
+
+
+
+
+
+
+        <?php endforeach ?>
         </div>
 
       </div>
