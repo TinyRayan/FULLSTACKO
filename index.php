@@ -1,7 +1,8 @@
 <?php 
 require 'PDO.php';
+require ('DAO.php');
 require_once 'header/header.php';
-require 'classes.php';
+
 ?>
 
 <!-- NAVBAR 1 --------------------------------->
@@ -65,7 +66,7 @@ require 'classes.php';
 
   <!-- DISHES 1-3 ------------------------------------>
 
-  <?php $plats = GetPlats($conn);
+  <?php $plats = PlatsByPopularity($conn);
    $count = 0; ?>
     <div class="container-fluid m-0 p-0 mt-5 d-none d-lg-block ">
      <div class="m-0 mt-5 d-flex row justify-content-center">
@@ -73,11 +74,11 @@ require 'classes.php';
        if ($count < 3) {
         $count++; ?>
          <div id="cardplat" class="card col-12 col-md-4 d-flex flex-row mb-4 mx-4 p-0">
-          <img src="Asset/img/IMAGES/images_the_district/food/<?php echo $plat->image; ?>"
+          <img src="Asset/img/IMAGES/images_the_district/food/<?= $plat['image']; ?>"
            class=" rounded-3 mt-0 me-2 shadow " alt="" style="width: 11rem; height: 11rem;">
             <div class="card-body p-0">
-             <h5 class="card-title fs-2"> <?php echo $plat->libelle; ?> </h5>
-              <p class="card-text fst-italic"> <?php echo $plat->description; ?> </p>
+             <h5 class="card-title fs-2"> <?= $plat['libelle']; ?> </h5>
+              <p class="card-text fst-italic"> <?= $plat['description']; ?> </p>
                <br>
          </div>
         </div>

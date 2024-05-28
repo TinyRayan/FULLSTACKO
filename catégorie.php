@@ -1,5 +1,6 @@
-<?php require_once('header/header.php'); 
-      require('PDO.php'); 
+<?php require_once 'header/header.php'; 
+      require 'PDO.php'; 
+      require 'DAO.php';
       $categories = GetCategories($conn);
 ?> 
 
@@ -19,12 +20,14 @@
 
       <!-- SEARCH BAR ---------------------------->
 
-      <div id="whiteshadow" class="col-md-3 d-none d-md-block offset-5 position-absolute align-self-center mt-5">
-        <form class="form-inline my-2 my-lg shadow-lg">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        </form>
-      </div>
+      <div class="container-fluid d-flex justify-content-center p-0 align-self-center position-absolute ">
+    <div id="whiteshadow" class="col-md-4 d-none d-md-block ">
+      <form class="form-inline my-2 my-lg shadow-lg">
+        <input class="form-control" type="search" placeholder="Search" id="searchInput" aria-label="Search">
+        <div id="searchResults" class="position-fixed bg-body-tertiary rounded-3 mt-2 col-12 row"></div>
+      </form>
     </div>
+  </div>
 
   </header>
 
@@ -66,7 +69,7 @@
 
 
 
-    <div class="container-fluid mt-5">
+   <!--  <div class="container-fluid mt-5">
       <div class="col row">
 
         <div id="blackshadow" class="col d-flex justify-content-start ">
@@ -81,7 +84,7 @@
 
         </div>
       </div>
-
+ -->
 
 
 

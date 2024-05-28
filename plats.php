@@ -1,7 +1,10 @@
-<?php require_once('header/header.php'); 
-require ('PDO.php');
-$plats = GetPlats($conn);
+<?php
 
+      require 'header/header.php'; 
+      require 'PDO.php';
+      require 'DAO.php';
+
+$plats = GetPlats ($conn);
 ?>
 
   <header id="blackshadow" class="d-flex justify-content-center p-0 ">
@@ -53,7 +56,7 @@ $plats = GetPlats($conn);
           </div>  
    
         </div>
-        <?php endforeach; ?> <!-- Unexpected 'endforeach' -->
+        <?php endforeach; ?>
         </div>
 
       </div>
