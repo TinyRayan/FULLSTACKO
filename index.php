@@ -79,7 +79,7 @@ require_once 'header/header.php';
             <div class="card-body p-0">
              <h5 class="card-title fs-2"> <?= $plat['libelle']; ?> </h5>
               <p class="card-text fst-italic"> <?= $plat['description']; ?> </p>
-               <br>
+               <a href="#" class="btn btnplat d-flex justify-content-center fw-medium shadow-lg" style="position: absolute; bottom: 0; left: 90%; transform: translateX(-50%);"id="bouton">Commander</a>             
          </div>
         </div>
        <?php }}?>

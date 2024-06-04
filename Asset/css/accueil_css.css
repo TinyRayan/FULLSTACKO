@@ -56,6 +56,17 @@
   transform: scale(1.10);
  }
 
+ .btnplat{
+  filter: drop-shadow(0 0 0.25rem black);
+ background-color: #970747; color: white;
+ transition: all 0.25s
+ }.btnplat:hover{
+  color: white;
+  background-color: rgb(57, 219, 70);
+  transform: scale(1.03);
+ }
+
+
  #colorcards{
   color: black;
   text-decoration: none;
@@ -79,7 +90,6 @@
 textarea {
   resize: none;
 }
-
 
 
 

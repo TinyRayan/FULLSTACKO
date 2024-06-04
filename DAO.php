@@ -29,9 +29,14 @@ Function getPlatsbyCategorie($cat,$conn)
 
 };
 
-Function GetPlatsBySelect
+ Function GetPlatsBySelect($conn) 
+ 
+ {
+    
 
-Function PlatsByPopularity($conn)
+ };
+
+Function PlatsByPopularity($conn) 
 
 {
 
